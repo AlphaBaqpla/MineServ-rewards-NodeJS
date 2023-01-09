@@ -1,0 +1,25 @@
+{
+    "Method": "rcon",
+    "WebServerIP": "",
+    "WebServerPort": "",
+    "SecretKey": "",
+    "RCon": {
+        "IP":"",
+        "Port":"",
+        "Password":"",
+        "Command":""
+    },
+    "MySQL": {
+        "IP":"",
+        "Username":"",
+        "Password":"",
+        "Database":"",
+        "SQL_Query":""
+    },
+    "LiteLoader": {
+        "Command":""
+    },
+    "Custom": {
+        "Function": ""
+    }
+}
