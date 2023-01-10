@@ -13,7 +13,7 @@
         "Username":"",
         "Password":"",
         "Database":"",
-        "SQL_Query":"UPDATE `iconomy` SET `balance`=`balance`+100 WHERE `username`='{username}'"
+        "SQL_Query":"UPDATE `iconomy` SET `balance`=`balance`+100 WHERE `username`='$user'"
     },
     "LiteLoader": {
         "Command":""
