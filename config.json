@@ -1,12 +1,12 @@
 {
     "Method": "RCon",
-    "WebServerPort": "",
+    "WebServerPort": "8080",
     "SecretKey": "",
     "RCon": {
-        "IP":"",
-        "Port":"",
-        "Password":"",
-        "Command":""
+        "IP":"localhost",
+        "Port":"25575",
+        "Password":"minecraft",
+        "Command":"give $user diamond"
     },
     "MySQL": {
         "IP":"",
