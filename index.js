@@ -1,4 +1,5 @@
 const config = require('./config.json')
+const fs = require('fs')
 const server = require('http')
 const { parse } = require('querystring')
 var SHA256 = require("crypto-js/sha256")
@@ -30,8 +31,20 @@ function checkSign(project,username,timestamp,signature){
 }
 
 function main(proj,user,time,sign){
-    if(config.Method == 'RCon'){}
-    else if(config.Method == 'MySQL'){}
-    else if(config.Method == 'LiteLoader'){}
-    else if(config.Method == 'Custom'){}
+    if(config.Method == 'RCon'){
+        const method = require('./methods/rcon.js')
+        method.execute(proj,user,time,sign,config)
+    }
+    else if(config.Method == 'MySQL'){
+        const method = require('./methods/mysql.js')
+        method.execute(proj,user,time,sign,config)
+    }
+    else if(config.Method == 'LiteLoader'){
+        const method = require('./methods/liteloader.js')
+        method.execute(proj,user,time,sign,config)
+    }
+    else if(config.Method == 'Custom'){
+        const method = require('./methods/custom.js')
+        method.execute(proj,user,time,sign,config)
+    }
 }
