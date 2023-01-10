@@ -16,6 +16,7 @@ server.createServer((req,res)=>{
             res.end('done')
         }
         else{
+            res.statusCode = 500
             res.end('error')
         }
     })
