@@ -1,6 +1,5 @@
 {
-    "Method": "rcon",
-    "WebServerIP": "",
+    "Method": "RCon",
     "WebServerPort": "",
     "SecretKey": "",
     "RCon": {
@@ -14,7 +13,7 @@
         "Username":"",
         "Password":"",
         "Database":"",
-        "SQL_Query":""
+        "SQL_Query":"UPDATE `iconomy` SET `balance`=`balance`+100 WHERE `username`='{username}'"
     },
     "LiteLoader": {
         "Command":""
