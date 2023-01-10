@@ -8,7 +8,7 @@ module.exports = {
         conn.on('auth', function(){
             console.log("Authenticated")
             console.log("Sending command: "+conf.RCon.Command.replaceAll('$user',user))
-            conn.send(conf.RCon.Command)
+            conn.send(conf.RCon.Command.replaceAll('$user',user))
         }).on('response', function(str){
             console.log("Response: " + str)
             conn.disconnect()
