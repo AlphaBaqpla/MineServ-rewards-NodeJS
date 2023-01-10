@@ -9,10 +9,10 @@
         "Command":"give $user diamond"
     },
     "MySQL": {
-        "IP":"",
-        "Username":"",
-        "Password":"",
-        "Database":"",
+        "IP":"localhost",
+        "Username":"root",
+        "Password":"minecraft",
+        "Database":"base1",
         "SQL_Query":"UPDATE `iconomy` SET `balance`=`balance`+100 WHERE `username`='$user'"
     },
     "LiteLoader": {
