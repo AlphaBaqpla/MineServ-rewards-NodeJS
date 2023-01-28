@@ -7,8 +7,18 @@ module.exports = {
         const conn = new Rcon(conf.RCon.IP, conf.RCon.Port, conf.RCon.Password, o)
         conn.on('auth', function(){
             console.log("Authenticated")
-            console.log("Sending command: "+conf.RCon.Command.replaceAll('$user',user))
-            conn.send(conf.RCon.Command.replaceAll('$user',user))
+            if(conf.Rcon.Command1 != null){
+                console.log("Sending command: "+conf.RCon.Command1.replaceAll('$user',user))
+                conn.send(conf.RCon.Command1.replaceAll('$user',user))
+            }
+            if(conf.Rcon.Command2 != null){
+                console.log("Sending command: "+conf.RCon.Command2.replaceAll('$user',user))
+                conn.send(conf.RCon.Command2.replaceAll('$user',user))
+            }
+            if(conf.Rcon.Command3 != null){
+                console.log("Sending command: "+conf.RCon.Command3.replaceAll('$user',user))
+                conn.send(conf.RCon.Command3.replaceAll('$user',user))
+            }
         }).on('response', function(str){
             console.log("Response: " + str)
             conn.disconnect()
