@@ -12,7 +12,7 @@ module.exports = {
         connection.connect()
         connection.query(conf.MySQL.SQL_Query.replaceAll('$user',user), function (error, results, fields){
             if (error) throw error
-            console.log('[DB] Success!')
+            console.log(time+" | Edit DB | Success!")
         })
         connection.end()
     }
